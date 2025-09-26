@@ -32,7 +32,7 @@ async def load_listings():
 
 @app.get("/health")
 async def health_check():
-    return {"status": "healthy"}
+    return {"status": "healthy", "version": "1.0.0"}
 
 @app.post("/", response_model=List[SearchResult])
 async def search_vehicles(vehicles: List[VehicleRequest]):
