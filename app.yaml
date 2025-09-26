@@ -1,0 +1,17 @@
+runtime: custom
+env: flex
+
+service: neighbor-search
+
+automatic_scaling:
+  min_instances: 0
+  max_instances: 10
+  target_cpu_utilization: 0.6
+
+resources:
+  cpu: 1
+  memory_gb: 1
+
+network:
+  forwarded_ports:
+    - 8080
